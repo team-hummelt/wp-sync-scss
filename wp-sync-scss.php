@@ -31,17 +31,43 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 /**
- * Currently plugin version.
- * Start at version 1.0.0 and use SemVer - https://semver.org
- * Rename this for your plugin and update it as you release new versions.
+ * PHP minimum requirement for the plugin.
  */
-define( 'WP_SYNC_SCSS_VERSION', '1.0.0' );
+const WP_SYNC_SCSS_MIN_PHP_VERSION = '7.4';
+
+/**
+ * WordPress minimum requirement for the plugin.
+ */
+const WP_SYNC_SCSS_MIN_WP_VERSION = '5.6';
+
+
+/**
+ * PLUGIN ROOT PATH.
+ */
+define('WP_SYNC_SCSS_PLUGIN_DIR', dirname(__FILE__));
+
+
+/**
+ * PLUGIN URL.
+ */
+define('WP_SYNC_SCSS_PLUGIN_URL', plugins_url('wp-sync-scss') . '/');
+
+/**
+ * PLUGIN SLUG.
+ */
+define('WP_SYNC_SCSS_SLUG_PATH', plugin_basename(__FILE__));
+
+/**
+ * PLUGIN Basename.
+ */
+define('WP_SYNC_SCSS_BASENAME', plugin_basename(__DIR__));
 
 /**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-wp-sync-scss-activator.php
  */
-function activate_wp_sync_scss() {
+function activate_wp_sync_scss(): void
+{
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-wp-sync-scss-activator.php';
 	Wp_Sync_Scss_Activator::activate();
 }
@@ -50,7 +76,8 @@ function activate_wp_sync_scss() {
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-wp-sync-scss-deactivator.php
  */
-function deactivate_wp_sync_scss() {
+function deactivate_wp_sync_scss(): void
+{
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-wp-sync-scss-deactivator.php';
 	Wp_Sync_Scss_Deactivator::deactivate();
 }
@@ -73,7 +100,8 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-wp-sync-scss.php';
  *
  * @since    1.0.0
  */
-function run_wp_sync_scss() {
+function run_wp_sync_scss(): void
+{
 
 	$plugin = new Wp_Sync_Scss();
 	$plugin->run();

@@ -13,6 +13,8 @@
  * @subpackage Wp_Sync_Scss/includes
  */
 
+use JetBrains\PhpStorm\NoReturn;
+
 /**
  * The core plugin class.
  *
@@ -38,6 +40,23 @@ class Wp_Sync_Scss {
 	 * @var      Wp_Sync_Scss_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
+
+    /**
+     * Store plugin main class to allow public access.
+     *
+     * @since    1.0.0
+     * @var object The main class.
+     */
+    protected object $main;
+
+    /**
+     * The plugin Slug Path.
+     *
+     * @since    1.0.0
+     * @access   protected
+     * @var      string $plugin_slug plugin Slug Path.
+     */
+    protected string $plugin_slug;
 
 	/**
 	 * The unique identifier of this plugin.
@@ -67,13 +86,22 @@ class Wp_Sync_Scss {
 	 * @since    1.0.0
 	 */
 	public function __construct() {
-		if ( defined( 'WP_SYNC_SCSS_VERSION' ) ) {
-			$this->version = WP_SYNC_SCSS_VERSION;
-		} else {
-			$this->version = '1.0.0';
-		}
-		$this->plugin_name = 'wp-sync-scss';
 
+        /**
+         * Currently plugin version.
+         * Start at version 1.0.0 and use SemVer - https://semver.org
+         * Rename this for your plugin and update it as you release new versions.
+         */
+        $plugin = get_file_data(plugin_dir_path(dirname(__FILE__)) . $this->plugin_name . '.php', array('Version' => 'Version'), false);
+        if (!$this->version) {
+            $this->version = $plugin['Version'];
+        }
+
+        $this->plugin_name = WP_SYNC_SCSS_BASENAME;
+        $this->plugin_slug = WP_SYNC_SCSS_SLUG_PATH;
+        $this->main = $this;
+
+        $this->check_dependencies();
 		$this->load_dependencies();
 		$this->set_locale();
 		$this->define_admin_hooks();
@@ -97,7 +125,8 @@ class Wp_Sync_Scss {
 	 * @since    1.0.0
 	 * @access   private
 	 */
-	private function load_dependencies() {
+	private function load_dependencies(): void
+    {
 
 		/**
 		 * The class responsible for orchestrating the actions and filters of the
@@ -126,6 +155,48 @@ class Wp_Sync_Scss {
 
 	}
 
+    /**
+     * Check PHP and WordPress Version
+     * of the plugin.
+     *
+     * @since    1.0.0
+     * @access   private
+     */
+    private function check_dependencies(): void
+    {
+        global $wp_version;
+        if (version_compare(PHP_VERSION, WP_SYNC_SCSS_MIN_PHP_VERSION, '<') || $wp_version < WP_SYNC_SCSS_MIN_WP_VERSION) {
+            $this->maybe_self_deactivate();
+        }
+    }
+
+    /**
+     * Self-Deactivate
+     * of the plugin.
+     *
+     * @since    1.0.0
+     * @access   private
+     */
+    private function maybe_self_deactivate(): void
+    {
+        require_once ABSPATH . 'wp-admin/includes/plugin.php';
+        deactivate_plugins($this->plugin_slug);
+        add_action('admin_notices', array($this, 'self_deactivate_notice'));
+    }
+
+    /**
+     * Self-Deactivate Admin Notiz
+     * of the plugin.
+     *
+     * @since    1.0.0
+     * @access   public
+     */
+    #[NoReturn] public function self_deactivate_notice(): void
+    {
+        echo sprintf('<div class="notice notice-error is-dismissible" style="margin-top:5rem"><p>' . __('This plugin has been disabled because it requires a PHP version greater than %s and a WordPress version greater than %s. Your PHP version can be updated by your hosting provider.', 'wp-cache-flow') . '</p></div>', WP_SYNC_SCSS_MIN_PHP_VERSION, WP_SYNC_SCSS_MIN_WP_VERSION);
+        exit();
+    }
+
 	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
@@ -135,7 +206,8 @@ class Wp_Sync_Scss {
 	 * @since    1.0.0
 	 * @access   private
 	 */
-	private function set_locale() {
+	private function set_locale(): void
+    {
 
 		$plugin_i18n = new Wp_Sync_Scss_i18n();
 
@@ -150,7 +222,8 @@ class Wp_Sync_Scss {
 	 * @since    1.0.0
 	 * @access   private
 	 */
-	private function define_admin_hooks() {
+	private function define_admin_hooks(): void
+    {
 
 		$plugin_admin = new Wp_Sync_Scss_Admin( $this->get_plugin_name(), $this->get_version() );
 
@@ -166,7 +239,8 @@ class Wp_Sync_Scss {
 	 * @since    1.0.0
 	 * @access   private
 	 */
-	private function define_public_hooks() {
+	private function define_public_hooks(): void
+    {
 
 		$plugin_public = new Wp_Sync_Scss_Public( $this->get_plugin_name(), $this->get_version() );
 
@@ -180,7 +254,8 @@ class Wp_Sync_Scss {
 	 *
 	 * @since    1.0.0
 	 */
-	public function run() {
+	public function run(): void
+    {
 		$this->loader->run();
 	}
 
@@ -191,7 +266,8 @@ class Wp_Sync_Scss {
 	 * @since     1.0.0
 	 * @return    string    The name of the plugin.
 	 */
-	public function get_plugin_name() {
+	public function get_plugin_name(): string
+    {
 		return $this->plugin_name;
 	}
 
@@ -201,7 +277,8 @@ class Wp_Sync_Scss {
 	 * @since     1.0.0
 	 * @return    Wp_Sync_Scss_Loader    Orchestrates the hooks of the plugin.
 	 */
-	public function get_loader() {
+	public function get_loader(): Wp_Sync_Scss_Loader
+    {
 		return $this->loader;
 	}
 
@@ -211,7 +288,8 @@ class Wp_Sync_Scss {
 	 * @since     1.0.0
 	 * @return    string    The version number of the plugin.
 	 */
-	public function get_version() {
+	public function get_version(): string
+    {
 		return $this->version;
 	}
 

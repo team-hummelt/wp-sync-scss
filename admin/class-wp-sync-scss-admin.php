@@ -27,9 +27,9 @@ class Wp_Sync_Scss_Admin {
 	 *
 	 * @since    1.0.0
 	 * @access   private
-	 * @var      string    $plugin_name    The ID of this plugin.
+	 * @var      string    $basename    The ID of this plugin.
 	 */
-	private $plugin_name;
+	private $basename;
 
 	/**
 	 * The version of this plugin.
@@ -44,12 +44,12 @@ class Wp_Sync_Scss_Admin {
 	 * Initialize the class and set its properties.
 	 *
 	 * @since    1.0.0
-	 * @param      string    $plugin_name       The name of this plugin.
+	 * @param      string    $basename   The name of this plugin.
 	 * @param      string    $version    The version of this plugin.
 	 */
-	public function __construct( $plugin_name, $version ) {
+	public function __construct( string $basename, string $version ) {
 
-		$this->plugin_name = $plugin_name;
+		$this->basename = $basename;
 		$this->version = $version;
 
 	}
@@ -59,7 +59,8 @@ class Wp_Sync_Scss_Admin {
 	 *
 	 * @since    1.0.0
 	 */
-	public function enqueue_styles() {
+	public function enqueue_styles(): void
+    {
 
 		/**
 		 * This function is provided for demonstration purposes only.
@@ -73,7 +74,7 @@ class Wp_Sync_Scss_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/wp-sync-scss-admin.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->basename, plugin_dir_url( __FILE__ ) . 'css/wp-sync-scss-admin.css', array(), $this->version, 'all' );
 
 	}
 
@@ -82,7 +83,8 @@ class Wp_Sync_Scss_Admin {
 	 *
 	 * @since    1.0.0
 	 */
-	public function enqueue_scripts() {
+	public function enqueue_scripts(): void
+    {
 
 		/**
 		 * This function is provided for demonstration purposes only.
@@ -96,7 +98,7 @@ class Wp_Sync_Scss_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/wp-sync-scss-admin.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->basename, plugin_dir_url( __FILE__ ) . 'js/wp-sync-scss-admin.js', array( 'jquery' ), $this->version, false );
 
 	}
 
