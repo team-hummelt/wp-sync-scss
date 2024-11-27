@@ -225,7 +225,7 @@ class Wp_Sync_Scss {
 	private function define_admin_hooks(): void
     {
 
-		$plugin_admin = new Wp_Sync_Scss_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new Wp_Sync_Scss_Admin( $this->get_plugin_name(), $this->get_version(), $this->main );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );

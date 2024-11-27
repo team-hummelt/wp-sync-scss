@@ -22,6 +22,14 @@
  */
 class Wp_Sync_Scss_Admin {
 
+    /**
+     * Store plugin main class to allow public access.
+     *
+     * @since    1.0.0
+     * @var Wp_Sync_Scss The main class.
+     */
+    protected Wp_Sync_Scss $main;
+
 	/**
 	 * The ID of this plugin.
 	 *
@@ -47,10 +55,11 @@ class Wp_Sync_Scss_Admin {
 	 * @param      string    $basename   The name of this plugin.
 	 * @param      string    $version    The version of this plugin.
 	 */
-	public function __construct( string $basename, string $version ) {
+	public function __construct( string $basename, string $version, Wp_Sync_Scss $main ) {
 
 		$this->basename = $basename;
 		$this->version = $version;
+        $this->main = $main;
 
 	}
 
