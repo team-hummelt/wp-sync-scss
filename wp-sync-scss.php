@@ -14,11 +14,13 @@
  *
  * @wordpress-plugin
  * Plugin Name:       WP-Sync-SCSS
+ * Tags:              scss, css, wordpress, style, development
  * Plugin URI:        https://plugins.wiecker.eu
- * Description:       WP-Sync-SCSS ist ein leistungsstarkes WordPress-Plugin, das SCSS-Dateien in CSS umwandelt – direkt in deinem Admin-Bereich. Wähle zwischen verschiedenen Map-Ausgabeoptionen (inline, separate Datei, oder keine Map), um deinen Workflow flexibel zu gestalten. Ideal für Entwickler, die Effizienz und Anpassungsfähigkeit schätzen.
+ * Description:       WP-Sync-SCSS is a powerful WordPress plugin that converts SCSS files to CSS - directly in your admin area. Choose between different map output options (inline, separate file, or no map) to customise your workflow. Ideal for developers who value efficiency and customisability.
  * Version:           1.0.0
  * Author:            Jens Wiecker
  * Author URI:        https://wiecker.eu/
+ * Donate link:       https://www.paypal.com/donate/?hosted_button_id=WRZJAC9L2GYNJ
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       wp-sync-scss
@@ -90,6 +92,7 @@ register_deactivation_hook( __FILE__, 'deactivate_wp_sync_scss' );
  * admin-specific hooks, and public-facing site hooks.
  */
 require plugin_dir_path( __FILE__ ) . 'includes/class-wp-sync-scss.php';
+
 
 /**
  * Begins execution of the plugin.

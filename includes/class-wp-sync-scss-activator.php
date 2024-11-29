@@ -29,8 +29,10 @@ class Wp_Sync_Scss_Activator {
 	 *
 	 * @since    1.0.0
 	 */
-	public static function activate() {
-
+	public static function activate(): void
+    {
+       // update_option('wp_sync_scss_show_welcome_page', true);
+        set_transient( 'wp_sync_scss_show_welcome_page', 1, 30 );
 	}
 
 }

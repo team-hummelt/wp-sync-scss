@@ -1,0 +1,16 @@
+{
+    "require": {
+        "scssphp/scssphp": "^1.13",
+        "twbs/bootstrap-icons": "^1.11"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "rm -rf vendor/twbs/bootstrap-icons/icons/*.svg",
+            "rm -rf vendor/twbs/bootstrap-icons/docs/content/icons/*.md"
+        ],
+        "post-update-cmd": [
+            "rm -rf vendor/twbs/bootstrap-icons/icons/*.svg",
+            "rm -rf vendor/twbs/bootstrap-icons/docs/content/icons/*.md"
+        ]
+    }
+}

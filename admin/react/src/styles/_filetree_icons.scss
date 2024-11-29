@@ -1,0 +1,892 @@
+$icon: #2271b1;
+#logo
+{
+	width: 505px;
+	margin: 0 auto;
+	text-align: center;
+}
+#pgtitle
+{
+	margin: 0 0 20px;
+	font-size: 18pt;
+	color: #09427F;
+}
+#container
+{
+	width: 100%;
+	margin: 0 auto;
+	height: auto;
+	overflow: auto;
+}
+#container li a.active {
+	background-color: red;
+	color: #fff;
+}
+
+#selected_file
+{
+padding-left: 1rem;
+
+}
+.filetree
+{
+	font-family: Verdana, sans-serif;
+	font-size: 14px;
+	line-height: 33px;
+	padding: 0;
+	margin: 0;
+}
+.filetree li.folder
+{
+	list-style: none;
+	padding: 0 0 0 20px;
+	margin: 0 0 0 10px;
+	white-space: nowrap;
+}
+.filetree li.file
+{
+	list-style: none;
+	padding: 0;
+	margin: 0 0 0 10px;
+	white-space: nowrap;
+}
+.filetree .folder-href {
+	color: #333;
+	text-decoration: none;
+	display: block;
+	padding: 0 2px 0 5px;
+	margin-left: 15px;
+}
+
+.filetree .folder-href {
+	transition: all 350ms ease-in-out;
+}
+.folder-href.active {
+	background: red;
+	color: #fff;
+}
+.filetree .folder-href
+{
+	&:hover:not(&.active) {
+		background: #BDF;
+	}
+}
+/*folder styles*/
+.filetree li.folder
+{
+	background: url(../images/filetree/folder.png) no-repeat left top;
+}
+.filetree li.expanded
+{
+	background: url(../images/filetree/folder_open.png) no-repeat left top;
+}
+.filetree li.file
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F3C0';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+	}
+}
+.filetree li.waitThree
+{
+	background: url(../images/filetree/spinner.gif) no-repeat left center;
+}
+/*extensions and mime types*/
+.filetree li.ext_3gp
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F3C3';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_afp
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F352';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_afpa
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F352';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_asp
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F352';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_aspx
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F352';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_avi
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F3C3';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_bat
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F746';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_bmp
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F740';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_c
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F352';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_cfm
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F352';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_cgi
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F352';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_com
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F746';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_cpp
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F352';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_css
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F742';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_doc
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F744';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_docx
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F745';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_exe
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F746';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_gif
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F747';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_fla
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F752';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_h
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F352';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_htm
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F749';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_html
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F749';
+		font-size: 18px;
+		padding-right: .25rem;
+		color: $icon;
+		padding-left: .25rem;
+	}
+}
+.filetree li.ext_jar
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F74A';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_jpg
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F74B';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_jpeg
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F74B';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_js
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F74C';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_lasso
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F352';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_log
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F352';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_m4p
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F754';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_mov
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F752';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_mp3
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F753';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_mp4
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F754';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_mpg
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F752';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_mpeg
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F752';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_ogg
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F3A5';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_pcx
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F36D';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_pdf
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F640';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_php
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F757';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_png
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F758';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_ppt
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F75A';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_psd
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F75B';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_pl
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F352';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_py
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F75C';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_rb
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F75E';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_rbx
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F75E';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_rhtml
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F75E';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_rpm
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F352';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_ruby
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F75E';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_sql
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F7F5';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_swf
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F37B';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_tif
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F763';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_tiff
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F763';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_txt
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F766';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_vb
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F352';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_wav
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F377';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_wmv
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F752';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_xls
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F76A';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_xml
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F76B';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_zip
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F3BF';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_woff2
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F768';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_woff
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F768';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_json
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F791';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_ttf
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F765';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_otf
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F755';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_webp
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F36D';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_scss
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F760';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_sass
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F75F';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+		color: $icon;
+	}
+}
+.filetree li.ext_svg
+{
+	&:before {
+		font-family: bootstrap-icons, sans-serif;
+		content: '\F762';
+		font-size: 18px;
+		padding-right: .25rem;
+		padding-left: .25rem;
+	}
+}
+
+.filetree ul.first {
+	padding-left: 0!important;
+}
+.three-collapse ul {
+	border-left: 1px solid #D9DADB;
+	padding-left: 20px;
+}
+.three-collapse ul li.folder {
+	&:before {
+		margin-left: -40px;
+		content: "\2014";
+		position: absolute;
+	}
+}
+
+
+.filetree li ul li a:hover::after {
+
+}
+.file {
+	position: relative;
+	display: flex;
+	align-items: center;
+	z-index: 0;
+	transition: all 300ms ease-in-out;
+
+}
+
+.file:hover, .file.active{
+	background: #BDF!important;
+	cursor: pointer;
+	&:after {
+		z-index: 1;
+		font-family: bootstrap-icons, sans-serif;
+		//content: '\f046  klicken zum auswählen';
+		content: '\F403';
+		font-style: normal;
+		position: absolute;
+		right: 2rem;
+
+	}
+}
+
+.filetree li ul li
+{
+	position: relative;
+}

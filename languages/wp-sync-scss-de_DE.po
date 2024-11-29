@@ -1,0 +1,444 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2024-11-29 21:02+0100\n"
+"PO-Revision-Date: 2024-11-29 21:46+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: admin/react\n"
+
+#: admin/Ajax/WP_Sync_Scss_Admin_Ajax.php:104
+#: admin/Ajax/WP_Sync_Scss_Admin_Ajax.php:128
+msgid "Ajax transmission error"
+msgstr "Ajax Übertragungsfehler"
+
+#: admin/Ajax/WP_Sync_Scss_Admin_Ajax.php:178
+msgid "Cache cleared"
+msgstr "Cache geleert"
+
+#: admin/class-wp-sync-scss-admin.php:76 admin/class-wp-sync-scss-admin.php:77
+#: includes/WpSyncScssDefaults.php:82
+msgid "SCSS Compiler"
+msgstr "SCSS-Compiler"
+
+#: admin/class-wp-sync-scss-admin.php:86 admin/class-wp-sync-scss-admin.php:87
+msgid "About WP-Sync-SCSS"
+msgstr "Über WP-Sync-SCSS"
+
+#: admin/class-wp-sync-scss-admin.php:99 includes/WpSyncScssDefaults.php:77
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: admin/class-wp-sync-scss-admin.php:133
+msgid "Donate"
+msgstr "Spenden"
+
+#: admin/class-wp-sync-scss-admin.php:144
+msgid ""
+"WP-Sync-SCSS is a powerful WordPress plugin that converts SCSS files to CSS "
+"- directly in your admin area. Choose between different map output options "
+"(inline, separate file, or no map) to customise your workflow. Ideal for "
+"developers who value efficiency and customisability."
+msgstr ""
+"WP-Sync-SCSS ist ein leistungsstarkes WordPress-Plugin, das SCSS-Dateien in "
+"CSS umwandelt – direkt in deinem Admin-Bereich. Wähle zwischen verschiedenen "
+"Map-Ausgabeoptionen (inline, separate Datei, oder keine Map), um deinen "
+"Workflow flexibel zu gestalten. Ideal für Entwickler, die Effizienz und "
+"Anpassungsfähigkeit schätzen."
+
+#: includes/WpSyncScssDefaults.php:22
+msgid "Subscriber"
+msgstr "Abonnent"
+
+#: includes/WpSyncScssDefaults.php:27
+msgid "Employees"
+msgstr "Mitarbeiter"
+
+#: includes/WpSyncScssDefaults.php:32
+msgid "Author"
+msgstr "Autor"
+
+#: includes/WpSyncScssDefaults.php:37
+msgid "Editor"
+msgstr "Redakteur"
+
+#: includes/WpSyncScssDefaults.php:42
+msgid "Administrator"
+msgstr "Administrator"
+
+#: includes/WpSyncScssDefaults.php:49
+msgid "expanded"
+msgstr "expanded"
+
+#: includes/WpSyncScssDefaults.php:53
+msgid "compressed"
+msgstr "compressed"
+
+#: includes/WpSyncScssDefaults.php:59
+msgid "File"
+msgstr "File"
+
+#: includes/WpSyncScssDefaults.php:63
+msgid "Inline"
+msgstr "Inline"
+
+#: includes/WpSyncScssDefaults.php:78
+msgid "Minimum requirement for using this plugin"
+msgstr "Mindestvoraussetzung für die Verwendung dieses Plugins"
+
+#: includes/WpSyncScssDefaults.php:79
+msgid "Plugin Info"
+msgstr "Plugin Info"
+
+#: includes/WpSyncScssDefaults.php:80
+msgid "Plugin settings"
+msgstr "Plugin Einstellungen"
+
+#: includes/WpSyncScssDefaults.php:81
+msgid "Cache active"
+msgstr "Cache aktiv"
+
+#: includes/WpSyncScssDefaults.php:83
+msgid "WP SYNC SCSS"
+msgstr "WP SYNC SCSS"
+
+#: includes/WpSyncScssDefaults.php:84
+msgid "Version"
+msgstr "Version"
+
+#: includes/WpSyncScssDefaults.php:85
+msgid "Set up paths"
+msgstr "Pfade einrichten"
+
+#: includes/WpSyncScssDefaults.php:86
+msgid "SCSS / SASS Location"
+msgstr "SCSS / SASS Location"
+
+#: includes/WpSyncScssDefaults.php:87
+msgid "CSS Location"
+msgstr "CSS Location"
+
+#: includes/WpSyncScssDefaults.php:88
+msgid "SCSS Compiler active"
+msgstr "SCSS Compiler aktiv"
+
+#: includes/WpSyncScssDefaults.php:89
+msgid "Select location"
+msgstr "Location auswählen"
+
+#: includes/WpSyncScssDefaults.php:90
+msgid "SCSS compiler active"
+msgstr "SCSS Compiler aktiv"
+
+#: includes/WpSyncScssDefaults.php:91
+msgid "Cache Setting"
+msgstr "Cache Einstellung"
+
+#: includes/WpSyncScssDefaults.php:92
+msgid "Output settings"
+msgstr "Ausgabe-Einstellungen"
+
+#: includes/WpSyncScssDefaults.php:93
+msgid "Create source map"
+msgstr "Source Map erstellen"
+
+#: includes/WpSyncScssDefaults.php:94
+msgid "Create enqueue stylesheets"
+msgstr "Enqueue Stylesheets erstellen"
+
+#: includes/WpSyncScssDefaults.php:95
+msgid "Compiler only active at login"
+msgstr "Compiler nur bei Login aktiv"
+
+#: includes/WpSyncScssDefaults.php:96
+msgid "CSS stylesheets are automatically added to the header."
+msgstr "CSS-Stylesheets werden automatisch in den Header eingereiht."
+
+#: includes/WpSyncScssDefaults.php:97
+msgid ""
+"If activated, the SCSS compiler is only active when a user is logged in."
+msgstr ""
+"Wenn aktiviert, ist der SCSS-Compiler nur aktiv, wenn ein Benutzer "
+"angemeldet ist."
+
+#: includes/WpSyncScssDefaults.php:98
+msgid "Source Map Optionen"
+msgstr "Source Map Optionen"
+
+#: includes/WpSyncScssDefaults.php:99
+msgid "Output"
+msgstr "Ausgabe"
+
+#: includes/WpSyncScssDefaults.php:100
+msgid "Select folder"
+msgstr "Location auswählen"
+
+#: includes/WpSyncScssDefaults.php:101
+msgid "Folder name"
+msgstr "Ordnername"
+
+#: includes/WpSyncScssDefaults.php:102
+msgid "cancel"
+msgstr "abbrechen"
+
+#: includes/WpSyncScssDefaults.php:103
+msgid "Cache path"
+msgstr "Cache Pfad"
+
+#: includes/WpSyncScssDefaults.php:104
+msgid "Empty cache"
+msgstr "Cache leeren"
+
+#: includes/WpSyncScssDefaults.php:105
+msgid "Plugin name"
+msgstr "Plugin Name"
+
+#: includes/WpSyncScssDefaults.php:106
+msgid "Plugin description"
+msgstr "Plugin-Beschreibung"
+
+#: includes/WpSyncScssDefaults.php:107
+msgid ""
+"WP-SCSS-Sync is the ideal tool for developers and designers who want to use "
+"SCSS in their WordPress projects. This plugin automatically converts SCSS "
+"files to CSS and offers flexible map output options, including inline maps, "
+"external files or no maps - depending on your needs."
+msgstr ""
+"WP-SCSS-Sync ist das ideale Werkzeug für Entwickler und Designer, die SCSS "
+"in ihren WordPress-Projekten nutzen möchten. Dieses Plugin konvertiert SCSS-"
+"Dateien automatisch in CSS und bietet flexible Map-Ausgabeoptionen, darunter "
+"Inline-Maps, externe Dateien oder keine Maps – ganz nach deinen Bedürfnissen."
+
+#: includes/WpSyncScssDefaults.php:108
+msgid "Features"
+msgstr "Features"
+
+#: includes/WpSyncScssDefaults.php:109
+msgid ""
+"<span class=\"fw-semibold\">Automatic SCSS compilation:</span> SCSS files "
+"are converted directly into CSS."
+msgstr ""
+"<span class=\"fw-semibold\">Automatische SCSS-Kompilierung:</span> SCSS-"
+"Dateien werden direkt in CSS umgewandelt."
+
+#: includes/WpSyncScssDefaults.php:110
+msgid ""
+"<span class=\"fw-semibold\">Flexible map options:</span> Choose between "
+"inline maps, separate map files or deactivated maps."
+msgstr ""
+"<span class=\"fw-semibold\">Flexible Map-Optionen:</span> Wähle zwischen "
+"Inline-Maps, separaten Map-Dateien oder deaktivierten Maps."
+
+#: includes/WpSyncScssDefaults.php:111
+msgid ""
+"<span class=\"fw-semibold\">Simple configuration:</span> Intuitive settings "
+"for quick adjustments."
+msgstr ""
+"<span class=\"fw-semibold\">Einfache Konfiguration:</span> Intuitive "
+"Einstellungen für schnelle Anpassungen."
+
+#: includes/WpSyncScssDefaults.php:112
+msgid ""
+"<span class=\"fw-semibold\">Seamless integration:</span> Optimised for use "
+"in WordPress themes and plugins."
+msgstr ""
+"<span class=\"fw-semibold\">Nahtlose Integration:</span> Optimiert für den "
+"Einsatz in WordPress-Themes und Plugins."
+
+#: includes/WpSyncScssDefaults.php:113
+msgid ""
+"<span class=\"fw-semibold\">Efficient and reliable:</span> Reduces "
+"development effort through automated processes."
+msgstr ""
+"<span class=\"fw-semibold\">Effizient und zuverlässig:</span> Reduziert den "
+"Entwicklungsaufwand durch automatisierte Prozesse."
+
+#: includes/WpSyncScssDefaults.php:114
+msgid "Advantages"
+msgstr "Vorteile"
+
+#: includes/WpSyncScssDefaults.php:115
+msgid "Save time with automatic SCSS-to-CSS compilation."
+msgstr "Spare Zeit durch automatische SCSS-zu-CSS-Kompilierung."
+
+#: includes/WpSyncScssDefaults.php:116
+msgid "Customise your workflow to suit your preferences."
+msgstr "Passe deinen Workflow an deine Präferenzen an."
+
+#: includes/WpSyncScssDefaults.php:117
+msgid "Stay in control of your styles with clear debugging options."
+msgstr "Behalte die Kontrolle über deine Stile mit klaren Debugging-Optionen."
+
+#: includes/WpSyncScssDefaults.php:118
+msgid ""
+"WP-SCSS-Sync - Your helper for clean and optimised CSS code in WordPress. 🚀"
+msgstr ""
+"WP-SCSS-Sync – Dein Helfer für sauberen und optimierten CSS-Code in "
+"WordPress. 🚀"
+
+#: includes/WpSyncScssDefaults.php:120
+msgid "🎉 Welcome to WP-SCSS-Sync!"
+msgstr "🎉 Willkommen bei WP-SCSS-Sync!"
+
+#: includes/WpSyncScssDefaults.php:121
+msgid ""
+"Thank you for installing <span class=\"fw-semibold\">WP-SCSS-Sync!</span> We "
+"look forward to supporting you in your WordPress development process. With "
+"this plugin, you can easily convert SCSS files to CSS and optimise your "
+"workflow."
+msgstr ""
+"Vielen Dank, dass du <span class=\"fw-semibold\">WP-SCSS-Sync</span> "
+"installiert hast! Wir freuen uns, dich bei deinem WordPress-"
+"Entwicklungsprozess unterstützen zu können. Mit diesem Plugin kannst du SCSS-"
+"Dateien mühelos in CSS umwandeln und deinen Workflow optimieren."
+
+#: includes/WpSyncScssDefaults.php:122
+msgid "First steps"
+msgstr "Erste Schritte"
+
+#: includes/WpSyncScssDefaults.php:123
+msgid "Configure settings"
+msgstr "Einstellungen konfigurieren"
+
+#: includes/WpSyncScssDefaults.php:124
+msgid "Add SCSS files"
+msgstr "SCSS-Dateien hinzufügen"
+
+#: includes/WpSyncScssDefaults.php:125
+msgid "Test and enjoy"
+msgstr "Testen und genießen"
+
+#: includes/WpSyncScssDefaults.php:126
+msgid ""
+"Go to the plugin settings to specify paths to your SCSS and CSS files and "
+"select your preferred map option."
+msgstr ""
+"Gehe zu den Plugin-Einstellungen, um Pfade zu deinen SCSS- und CSS-Dateien "
+"anzugeben und deine bevorzugte Map-Option auszuwählen."
+
+#: includes/WpSyncScssDefaults.php:127
+msgid ""
+"Upload your SCSS files to the corresponding directory. WP-SCSS-Sync will do "
+"the rest!"
+msgstr ""
+"Lade deine SCSS-Dateien in das entsprechende Verzeichnis hoch. WP-SCSS-Sync "
+"erledigt den Rest!"
+
+#: includes/WpSyncScssDefaults.php:128
+msgid ""
+"Change your SCSS files and view the automatically generated CSS files - it "
+"couldn't be quicker or easier."
+msgstr ""
+"Ändere deine SCSS-Dateien und sieh dir die automatisch erstellten CSS-"
+"Dateien an – schneller und einfacher geht’s nicht."
+
+#: includes/WpSyncScssDefaults.php:129
+msgid "Useful functions"
+msgstr "Nützliche Funktionen"
+
+#: includes/WpSyncScssDefaults.php:130
+msgid ""
+"<span class=\"fw-semibold\">Live compilation:</span> Changes in SCSS files "
+"are applied directly to CSS."
+msgstr ""
+"<span class=\"fw-semibold\">Live-Kompilierung:</span> Änderungen in SCSS-"
+"Dateien werden direkt in CSS übernommen."
+
+#: includes/WpSyncScssDefaults.php:131
+msgid ""
+"<span class=\"fw-semibold\">Flexible map options:</span> Choose from inline "
+"maps, external maps or no maps at all."
+msgstr ""
+"<span class=\"fw-semibold\">Flexible Map-Optionen:</span> Wähle aus Inline-"
+"Maps, externen Maps oder ganz ohne Maps."
+
+#: includes/WpSyncScssDefaults.php:132
+msgid ""
+"<span class=\"fw-semibold\">WordPress integration:</span> Simple workflow, "
+"especially for WordPress themes and plugins."
+msgstr ""
+"<span class=\"fw-semibold\">WordPress-Integration:</span> Einfacher "
+"Workflow, speziell für WordPress-Themes und Plugins."
+
+#: includes/WpSyncScssDefaults.php:133
+msgid "💖 Support the further development of WP-SCSS-Sync!"
+msgstr "💖 Unterstütze die Weiterentwicklung von WP-SCSS-Sync!"
+
+#: includes/WpSyncScssDefaults.php:134
+msgid ""
+"Thank you for using WP-SCSS-Sync! This plugin was developed to make your "
+"life as a developer easier - and it is constantly being improved. Your "
+"support helps us to develop new features, fix bugs and maintain the quality "
+"of the plugin."
+msgstr ""
+"Vielen Dank, dass du WP-SCSS-Sync nutzt! Dieses Plugin wurde entwickelt, um "
+"dir das Leben als Entwickler zu erleichtern – und es wird ständig weiter "
+"verbessert. Deine Unterstützung hilft uns, neue Funktionen zu entwickeln, "
+"Bugs zu beheben und die Qualität des Plugins aufrechtzuerhalten."
+
+#: includes/WpSyncScssDefaults.php:135
+msgid "Why donate?"
+msgstr "Warum spenden?"
+
+#: includes/WpSyncScssDefaults.php:136
+msgid ""
+"<span class=\"fw-semibold\">Promotion of new features:</span> Your donation "
+"enables us to integrate even more helpful functions."
+msgstr ""
+"<span class=\"fw-semibold\">Förderung neuer Features:</span> Deine Spende "
+"ermöglicht es uns, noch mehr hilfreiche Funktionen zu integrieren."
+
+#: includes/WpSyncScssDefaults.php:137
+msgid ""
+"<span class=\"fw-semibold\">Continuous updates:</span> We ensure that the "
+"plugin remains compatible with future WordPress versions."
+msgstr ""
+"<span class=\"fw-semibold\">Kontinuierliche Updates:</span> Wir sorgen "
+"dafür, dass das Plugin mit zukünftigen WordPress-Versionen kompatibel bleibt."
+
+#: includes/WpSyncScssDefaults.php:138
+msgid ""
+"<span class=\"fw-semibold\">Community support:</span> With your support, we "
+"can respond more quickly to questions and problems."
+msgstr ""
+"<span class=\"fw-semibold\">Community-Support</span> Mit deiner "
+"Unterstützung können wir schneller auf Fragen und Probleme reagieren."
+
+#: includes/WpSyncScssDefaults.php:139
+msgid "How can you help?"
+msgstr "Wie kannst du helfen?"
+
+#: includes/WpSyncScssDefaults.php:140
+msgid "Every contribution - big or small - makes a difference!"
+msgstr "Jeder Beitrag – ob groß oder klein – macht einen Unterschied!"
+
+#: includes/WpSyncScssDefaults.php:141
+msgid "Simply click on the button below to support us:"
+msgstr "Klicke einfach auf den unten stehenden Button, um uns zu unterstützen:"
+
+#: includes/WpSyncScssDefaults.php:142
+msgid "Thank you very much for your support!"
+msgstr "Vielen Dank für deine Unterstützung!"
+
+#: includes/WpSyncScssDefaults.php:143
+msgid "Together we make WP-SCSS-Sync even better."
+msgstr "Gemeinsam machen wir WP-SCSS-Sync noch besser."
+
+#: includes/class-wp-sync-scss.php:255
+#, php-format
+msgid ""
+"This plugin has been disabled because it requires a PHP version greater than "
+"%s and a WordPress version greater than %s. Your PHP version can be updated "
+"by your hosting provider."
+msgstr ""
+"Dieses Plugin wurde deaktiviert, weil es eine PHP-Version größer als %s und "
+"eine WordPress-Version größer als %s benötigt. Ihre PHP-Version kann von "
+"Ihrem Hosting-Anbieter aktualisiert werden."
