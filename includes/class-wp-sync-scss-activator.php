@@ -32,7 +32,7 @@ class Wp_Sync_Scss_Activator {
 	public static function activate(): void
     {
        // update_option('wp_sync_scss_show_welcome_page', true);
-        set_transient( 'wp_sync_scss_show_welcome_page', 1, 30 );
+        set_transient( 'scss_auto_compiler_welcome_show_welcome_page', 1, 30 );
 	}
 
 }

@@ -21,8 +21,8 @@ export default class App extends React.Component {
 
         return (
             <React.Fragment>
-                {this.urlSearchParam('page') === 'wp-sync-scss-options' && <PluginPage/>}
-                {this.urlSearchParam('page') === 'wp-sync-scss-welcome' && <WelcomePage/>}
+                {this.urlSearchParam('page') === 'scss-auto-compiler-options' && <PluginPage/>}
+                {this.urlSearchParam('page') === 'scss-auto-compiler-welcome' && <WelcomePage/>}
             </React.Fragment>
         )
     }

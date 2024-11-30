@@ -101,7 +101,7 @@ class wp_sync_scss_admin_ajax
         $location = filter_input(INPUT_POST, 'location', FILTER_UNSAFE_RAW);
         $is_file = filter_input(INPUT_POST, 'is_file', FILTER_VALIDATE_BOOLEAN);
         if(!$path || !$location) {
-            $this->responseJson->msg = __('Ajax transmission error', 'wp-sync-scss') . ' (Ajx-'.__LINE__.')';
+            $this->responseJson->msg = __('Ajax transmission error', 'scss-auto-compiler') . ' (Ajx-'.__LINE__.')';
             return $this->responseJson;
         }
 
@@ -124,7 +124,7 @@ class wp_sync_scss_admin_ajax
     {
         $data = filter_input(INPUT_POST, 'data', FILTER_UNSAFE_RAW);
         if(!$data){
-            $this->responseJson->msg = __('Ajax transmission error', 'wp-sync-scss') . ' (Ajx-'.__LINE__.')';
+            $this->responseJson->msg = __('Ajax transmission error', 'scss-auto-compiler') . ' (Ajx-'.__LINE__.')';
             return $this->responseJson;
         }
         global $wpSyncScssHelper;
@@ -174,7 +174,7 @@ class wp_sync_scss_admin_ajax
         }
 
         $this->responseJson->status = true;
-        $this->responseJson->msg = __('Cache cleared', 'wp-sync-scss');
+        $this->responseJson->msg = __('Cache cleared', 'scss-auto-compiler');
         return $this->responseJson;
     }
 

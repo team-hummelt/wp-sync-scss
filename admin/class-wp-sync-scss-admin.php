@@ -73,20 +73,20 @@ class Wp_Sync_Scss_Admin
     {
         $settings = get_option($this->basename . '/settings');
         $hook_suffix = add_management_page(
-            __('SCSS Compiler', 'wp-sync-scss'),
-            __('SCSS Compiler', 'wp-sync-scss'),
+            __('SCSS Compiler', 'scss-auto-compiler'),
+            __('SCSS Compiler', 'scss-auto-compiler'),
             $settings['user_role'],
-            'wp-sync-scss-options',
+            'scss-auto-compiler-options',
             array($this, 'wp_sync_scss_start')
         );
 
         add_action('load-' . $hook_suffix, array($this, 'wp_sync_scss_admin_options_script'));
 
         $hook_suffix = add_plugins_page(
-            __('About WP-Sync-SCSS', 'wp-sync-scss'),
-            __('About WP-Sync-SCSS', 'wp-sync-scss'),
+            __('SCSS AutoCompiler', 'scss-auto-compiler'),
+            __('SCSS AutoCompiler', 'scss-auto-compiler'),
             'manage_options',
-            'wp-sync-scss-welcome',
+            'scss-auto-compiler-welcome',
             array( $this, 'wp_sync_scss_render_welcome_page' ) );
 
         add_action('load-' . $hook_suffix, array($this, 'wp_sync_scss_admin_options_script'));
@@ -96,7 +96,7 @@ class Wp_Sync_Scss_Admin
 
     public function wp_sync_scss_add_settings_link($links)
     {
-        $settings_link = '<a href="' . admin_url( 'tools.php?page=wp-sync-scss-options' ) . '">'.__('Settings', 'wp-sync-scss').'</a>';
+        $settings_link = '<a href="' . admin_url( 'tools.php?page=scss-auto-compiler-options' ) . '">'.__('Settings', 'scss-auto-compiler').'</a>';
         array_unshift( $links, $settings_link );
         return $links;
     }
@@ -128,9 +128,9 @@ class Wp_Sync_Scss_Admin
     }
 
     public function wp_scss_sync_modify_plugin_description($plugin_meta, $plugin_file, $plugin_data, $status) {
-        if (str_contains($plugin_file, 'wp-sync-scss.php')) {
+        if (str_contains($plugin_file, 'scss-auto-compiler.php')) {
             $new_links = array(
-                'donate' => '<a href="https://www.paypal.com/donate/?hosted_button_id=WRZJAC9L2GYNJ" target="_blank">'.__('Donate', 'wp-sync-scss').'</a>',
+                'donate' => '<a href="https://www.paypal.com/donate/?hosted_button_id=WRZJAC9L2GYNJ" target="_blank">'.__('Donate', 'scss-auto-compiler').'</a>',
             );
 
             $plugin_meta = array_merge( $plugin_meta, $new_links );
@@ -140,8 +140,8 @@ class Wp_Sync_Scss_Admin
 
     public function wp_scss_sync_plugin_description( $all_plugins ) {
         foreach ( $all_plugins as $plugin_file => &$plugin_data ) {
-            if ( 'WP-Sync-SCSS' === $plugin_data['Name'] ) {
-                $plugin_data['Description'] = __('WP-Sync-SCSS is a powerful WordPress plugin that converts SCSS files to CSS - directly in your admin area. Choose between different map output options (inline, separate file, or no map) to customise your workflow. Ideal for developers who value efficiency and customisability.', 'wp-sync-scss');
+            if ( 'SCSS AutoCompiler' === $plugin_data['Name'] ) {
+                $plugin_data['Description'] = __('SCSS AutoCompiler is a powerful WordPress plugin that converts SCSS files to CSS - directly in your admin area. Choose between different map output options (inline, separate file, or no map) to customise your workflow. Ideal for developers who value efficiency and customisability.', 'scss-auto-compiler');
             }
         }
         return $all_plugins;
@@ -151,10 +151,10 @@ class Wp_Sync_Scss_Admin
     {
         if ( ! current_user_can( 'manage_options' ) )
             return;
-        if ( ! get_transient( 'wp_sync_scss_show_welcome_page' ) )
+        if ( ! get_transient( 'scss_auto_compiler_welcome_show_welcome_page' ) )
             return;
-        delete_transient( 'wp_sync_scss_show_welcome_page' );
-        wp_safe_redirect( admin_url( 'plugins.php?page=wp-sync-scss-welcome') );
+        delete_transient( 'scss_auto_compiler_welcome_show_welcome_page' );
+        wp_safe_redirect( admin_url( 'plugins.php?page=scss-auto-compiler-welcome') );
         exit;
     }
 

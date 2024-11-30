@@ -263,7 +263,7 @@ export default class PluginPage extends React.Component {
                     <Card className="shadow-sm position-relative">
                         <h5 className="card-header d-flex align-items-center text-white  bg-orange py-4">
                             <i style={{fontSize: '2rem'}} className="bi bi-wordpress d-block me-2"></i>
-                            {synCssClient.lang['WP SYNC SCSS']}</h5>
+                            {synCssClient.lang['SCSS AutoCompiler']}</h5>
                         <CardBody style={{minHeight: '55vh'}} className="pb-4">
                             <div className="col-12 mx-auto">
                                 <Card className="shadow-sm">

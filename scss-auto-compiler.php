@@ -10,20 +10,20 @@
  *
  * @link              https://wiecker.eu
  * @since             1.0.0
- * @package           Wp_Sync_Scss
+ * @package           SCSS_AutoCompiler
  *
  * @wordpress-plugin
- * Plugin Name:       WP-Sync-SCSS
+ * Plugin Name:       SCSS AutoCompiler
  * Tags:              scss, css, wordpress, style, development
  * Plugin URI:        https://plugins.wiecker.eu
- * Description:       WP-Sync-SCSS is a powerful WordPress plugin that converts SCSS files to CSS - directly in your admin area. Choose between different map output options (inline, separate file, or no map) to customise your workflow. Ideal for developers who value efficiency and customisability.
+ * Description:       SCSS AutoCompiler is a powerful WordPress plugin that converts SCSS files to CSS - directly in your admin area. Choose between different map output options (inline, separate file, or no map) to customise your workflow. Ideal for developers who value efficiency and customisability.
  * Version:           1.0.0
  * Author:            Jens Wiecker
  * Author URI:        https://wiecker.eu/
  * Donate link:       https://www.paypal.com/donate/?hosted_button_id=WRZJAC9L2GYNJ
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       wp-sync-scss
+ * Text Domain:       scss-auto-compiler
  * Domain Path:       /languages
  */
 
@@ -52,7 +52,7 @@ define('WP_SYNC_SCSS_PLUGIN_DIR', dirname(__FILE__));
 /**
  * PLUGIN URL.
  */
-define('WP_SYNC_SCSS_PLUGIN_URL', plugins_url('wp-sync-scss') . '/');
+define('WP_SYNC_SCSS_PLUGIN_URL', plugins_url('scss-auto-compiler') . '/');
 
 /**
  * PLUGIN SLUG.

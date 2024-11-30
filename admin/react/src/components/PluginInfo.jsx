@@ -17,7 +17,7 @@ export default class PluginInfo extends React.Component {
                     <h5>{synCssClient.lang['Plugin Info']}</h5>
                     <hr className="mt-1 mb-3"/>
                     <div className="fs-6 mb-1 fw-semibold">{synCssClient.lang['Plugin name']}:</div>
-                    <p style={{fontSize: '16px'}}>WP-SCSS-Sync</p>
+                    <p style={{fontSize: '16px'}}>{synCssClient.lang['SCSS AutoCompiler']}</p>
                     <div className="fs-6 mb-1 fw-semibold">{synCssClient.lang['Plugin description']}:</div>
                     <p style={{fontSize: '16px'}}>{synCssClient.lang['description_txt']}</p>
                     <div className="fs-6 mb-1 fw-semibold">{synCssClient.lang['Features']}:</div>

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-29 21:51+0100\n"
+"POT-Creation-Date: 2024-11-30 02:21+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: admin/react\n"
 
 #: admin/Ajax/WP_Sync_Scss_Admin_Ajax.php:104
-#: admin/Ajax/WP_Sync_Scss_Admin_Ajax.php:128
+#: admin/Ajax/WP_Sync_Scss_Admin_Ajax.php:127
 msgid "Ajax transmission error"
 msgstr ""
 
-#: admin/Ajax/WP_Sync_Scss_Admin_Ajax.php:178
+#: admin/Ajax/WP_Sync_Scss_Admin_Ajax.php:177
 msgid "Cache cleared"
 msgstr ""
 
@@ -32,7 +32,8 @@ msgid "SCSS Compiler"
 msgstr ""
 
 #: admin/class-wp-sync-scss-admin.php:86 admin/class-wp-sync-scss-admin.php:87
-msgid "About WP-Sync-SCSS"
+#: includes/WpSyncScssDefaults.php:83
+msgid "SCSS AutoCompiler"
 msgstr ""
 
 #: admin/class-wp-sync-scss-admin.php:99 includes/WpSyncScssDefaults.php:77
@@ -44,7 +45,7 @@ msgid "Donate"
 msgstr ""
 
 #: admin/class-wp-sync-scss-admin.php:144
-msgid "WP-Sync-SCSS is a powerful WordPress plugin that converts SCSS files to CSS - directly in your admin area. Choose between different map output options (inline, separate file, or no map) to customise your workflow. Ideal for developers who value efficiency and customisability."
+msgid "SCSS AutoCompiler is a powerful WordPress plugin that converts SCSS files to CSS - directly in your admin area. Choose between different map output options (inline, separate file, or no map) to customise your workflow. Ideal for developers who value efficiency and customisability."
 msgstr ""
 
 #: includes/WpSyncScssDefaults.php:22
@@ -97,10 +98,6 @@ msgstr ""
 
 #: includes/WpSyncScssDefaults.php:81
 msgid "Cache active"
-msgstr ""
-
-#: includes/WpSyncScssDefaults.php:83
-msgid "WP SYNC SCSS"
 msgstr ""
 
 #: includes/WpSyncScssDefaults.php:84
@@ -196,7 +193,7 @@ msgid "Plugin description"
 msgstr ""
 
 #: includes/WpSyncScssDefaults.php:107
-msgid "WP-SCSS-Sync is the ideal tool for developers and designers who want to use SCSS in their WordPress projects. This plugin automatically converts SCSS files to CSS and offers flexible map output options, including inline maps, external files or no maps - depending on your needs."
+msgid "SCSS AutoCompiler is the ideal tool for developers and designers who want to use SCSS in their WordPress projects. This plugin automatically converts SCSS files to CSS and offers flexible map output options, including inline maps, external files or no maps - depending on your needs."
 msgstr ""
 
 #: includes/WpSyncScssDefaults.php:108
@@ -240,15 +237,15 @@ msgid "Stay in control of your styles with clear debugging options."
 msgstr ""
 
 #: includes/WpSyncScssDefaults.php:118
-msgid "WP-SCSS-Sync - Your helper for clean and optimised CSS code in WordPress. 🚀"
+msgid "SCSS AutoCompiler - Your helper for clean and optimised CSS code in WordPress. 🚀"
 msgstr ""
 
 #: includes/WpSyncScssDefaults.php:120
-msgid "🎉 Welcome to WP-SCSS-Sync!"
+msgid "🎉 Welcome to SCSS AutoCompiler!"
 msgstr ""
 
 #: includes/WpSyncScssDefaults.php:121
-msgid "Thank you for installing <span class=\"fw-semibold\">WP-SCSS-Sync!</span> We look forward to supporting you in your WordPress development process. With this plugin, you can easily convert SCSS files to CSS and optimise your workflow."
+msgid "Thank you for installing <span class=\"fw-semibold\">SCSS AutoCompiler!</span> We look forward to supporting you in your WordPress development process. With this plugin, you can easily convert SCSS files to CSS and optimise your workflow."
 msgstr ""
 
 #: includes/WpSyncScssDefaults.php:122
@@ -272,7 +269,7 @@ msgid "Go to the plugin settings to specify paths to your SCSS and CSS files and
 msgstr ""
 
 #: includes/WpSyncScssDefaults.php:127
-msgid "Upload your SCSS files to the corresponding directory. WP-SCSS-Sync will do the rest!"
+msgid "Upload your SCSS files to the corresponding directory. SCSS AutoCompiler will do the rest!"
 msgstr ""
 
 #: includes/WpSyncScssDefaults.php:128
@@ -296,11 +293,11 @@ msgid "<span class=\"fw-semibold\">WordPress integration:</span> Simple workflow
 msgstr ""
 
 #: includes/WpSyncScssDefaults.php:133
-msgid "💖 Support the further development of WP-SCSS-Sync!"
+msgid "💖 Support the further development of SCSS AutoCompiler!"
 msgstr ""
 
 #: includes/WpSyncScssDefaults.php:134
-msgid "Thank you for using WP-SCSS-Sync! This plugin was developed to make your life as a developer easier - and it is constantly being improved. Your support helps us to develop new features, fix bugs and maintain the quality of the plugin."
+msgid "Thank you for using SCSS AutoCompiler! This plugin was developed to make your life as a developer easier - and it is constantly being improved. Your support helps us to develop new features, fix bugs and maintain the quality of the plugin."
 msgstr ""
 
 #: includes/WpSyncScssDefaults.php:135
@@ -336,7 +333,7 @@ msgid "Thank you very much for your support!"
 msgstr ""
 
 #: includes/WpSyncScssDefaults.php:143
-msgid "Together we make WP-SCSS-Sync even better."
+msgid "Together we make SCSS AutoCompiler even better."
 msgstr ""
 
 #: includes/class-wp-sync-scss.php:255
