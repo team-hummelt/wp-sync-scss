@@ -73,8 +73,8 @@ class Wp_Sync_Scss_Admin
     {
         $settings = get_option($this->basename . '/settings');
         $hook_suffix = add_management_page(
-            __('SCSS Compiler', 'scss-auto-compiler'),
-            __('SCSS Compiler', 'scss-auto-compiler'),
+            __('AutoCSS Builder', 'autocompiler-scss'),
+            __('AutoCSS Builder', 'autocompiler-scss'),
             $settings['user_role'],
             'scss-auto-compiler-options',
             array($this, 'wp_sync_scss_start')
@@ -83,8 +83,8 @@ class Wp_Sync_Scss_Admin
         add_action('load-' . $hook_suffix, array($this, 'wp_sync_scss_admin_options_script'));
 
         $hook_suffix = add_plugins_page(
-            __('SCSS AutoCompiler', 'scss-auto-compiler'),
-            __('SCSS AutoCompiler', 'scss-auto-compiler'),
+            __('AutoCSS Builder', 'autocompiler-scss'),
+            __('AutoCSS Builder', 'autocompiler-scss'),
             'manage_options',
             'scss-auto-compiler-welcome',
             array( $this, 'wp_sync_scss_render_welcome_page' ) );
@@ -96,7 +96,7 @@ class Wp_Sync_Scss_Admin
 
     public function wp_sync_scss_add_settings_link($links)
     {
-        $settings_link = '<a href="' . admin_url( 'tools.php?page=scss-auto-compiler-options' ) . '">'.__('Settings', 'scss-auto-compiler').'</a>';
+        $settings_link = '<a href="' . admin_url( 'tools.php?page=scss-auto-compiler-options' ) . '">'.__('Settings', 'autocompiler-scss').'</a>';
         array_unshift( $links, $settings_link );
         return $links;
     }
@@ -117,7 +117,7 @@ class Wp_Sync_Scss_Admin
         add_action('admin_enqueue_scripts', array($this, 'enqueue_scripts'));
         $title_nonce = wp_create_nonce('wp_sync_scss_admin_handle');
 
-        wp_register_script('wp-sync-scss-admin-ajax-script', '', [], '', true);
+        wp_register_script('wp-sync-scss-admin-ajax-script', '', [], $this->version, true);
         wp_enqueue_script('wp-sync-scss-admin-ajax-script');
         wp_localize_script('wp-sync-scss-admin-ajax-script', 'synCssClient', array(
             'ajax_url' => admin_url('admin-ajax.php'),
@@ -128,9 +128,9 @@ class Wp_Sync_Scss_Admin
     }
 
     public function wp_scss_sync_modify_plugin_description($plugin_meta, $plugin_file, $plugin_data, $status) {
-        if (str_contains($plugin_file, 'scss-auto-compiler.php')) {
+        if (str_contains($plugin_file, 'autocompiler-scss.php')) {
             $new_links = array(
-                'donate' => '<a href="https://www.paypal.com/donate/?hosted_button_id=WRZJAC9L2GYNJ" target="_blank">'.__('Donate', 'scss-auto-compiler').'</a>',
+                'donate' => '<a href="https://www.paypal.com/donate/?hosted_button_id=WRZJAC9L2GYNJ" target="_blank">'.__('Donate', 'autocompiler-scss').'</a>',
             );
 
             $plugin_meta = array_merge( $plugin_meta, $new_links );
@@ -140,8 +140,8 @@ class Wp_Sync_Scss_Admin
 
     public function wp_scss_sync_plugin_description( $all_plugins ) {
         foreach ( $all_plugins as $plugin_file => &$plugin_data ) {
-            if ( 'SCSS AutoCompiler' === $plugin_data['Name'] ) {
-                $plugin_data['Description'] = __('SCSS AutoCompiler is a powerful WordPress plugin that converts SCSS files to CSS - directly in your admin area. Choose between different map output options (inline, separate file, or no map) to customise your workflow. Ideal for developers who value efficiency and customisability.', 'scss-auto-compiler');
+            if ( 'AutoCSS Builder' === $plugin_data['Name'] ) {
+                $plugin_data['Description'] = __('AutoCSS Builder is a powerful WordPress plugin that converts SCSS files to CSS - directly in your admin area. Choose between different map output options (inline, separate file, or no map) to customise your workflow. Ideal for developers who value efficiency and customisability.', 'autocompiler-scss');
             }
         }
         return $all_plugins;

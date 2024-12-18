@@ -107,7 +107,7 @@ class Wp_Sync_Scss_Public
                         $url = site_url() . '/' . str_replace('\\', '/', $matches[0]);
                         $url = $url . $pathInfo['basename'];
                         $id = 'wp-sync-css-compiler-file-' . $pathInfo['filename'];
-                        $modificated = date('YmdHi', filemtime($dir . $pathInfo['basename']));
+                        $modificated =  gmdate('YmdHi', filemtime($dir . $pathInfo['basename']));
                         wp_enqueue_style($id, $url, [], $modificated);
                     }
                 }

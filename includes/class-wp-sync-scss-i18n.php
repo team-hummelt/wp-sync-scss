@@ -36,7 +36,7 @@ class Wp_Sync_Scss_i18n {
     {
 
 		load_plugin_textdomain(
-			'scss-auto-compiler',
+			'autocompiler-scss',
 			false,
 			dirname(plugin_basename(__FILE__), 2) . '/languages/'
 		);

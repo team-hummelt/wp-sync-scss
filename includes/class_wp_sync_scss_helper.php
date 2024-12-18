@@ -80,24 +80,46 @@ class WP_Sync_Scss_Helper
 
     public function destroyDirRecursive($dir): bool
     {
-        if (!is_dir($dir) || is_link($dir))
-            return unlink($dir);
+        global $wp_filesystem;
+
+        // create a file interaction object, if it is not already created
+        if( ! $wp_filesystem ){
+            require_once ABSPATH . 'wp-admin/includes/file.php';
+            WP_Filesystem();
+        }
+
+        if(is_dir($dir)) {
+            $wp_filesystem->rmdir($dir, true);
+            return true;
+        }
+
+        if (!is_dir($dir) || is_link($dir)){
+            wp_delete_file($dir);
+            return false;
+        }
 
         foreach (scandir($dir) as $file) {
             if ($file == "." || $file == "..")
                 continue;
             if (!$this->destroyDirRecursive($dir . DIRECTORY_SEPARATOR . $file)) {
-                chmod($dir . DIRECTORY_SEPARATOR . $file, 0777);
+                //chmod($dir . DIRECTORY_SEPARATOR . $file, 0777);
                 if (!$this->destroyDirRecursive($dir . DIRECTORY_SEPARATOR . $file)) return false;
             }
         }
-        return rmdir($dir);
+        return $wp_filesystem->rmdir($dir);
     }
 
     public function check_if_dir($dir): bool
     {
+        global $wp_filesystem;
+
+        // create a file interaction object, if it is not already created
+        if( ! $wp_filesystem ){
+            require_once ABSPATH . 'wp-admin/includes/file.php';
+            WP_Filesystem();
+        }
         if (!is_dir($dir)) {
-            if (!mkdir($dir, 0777, true)) {
+            if (!$wp_filesystem->mkdir($dir, 0777, true)) {
                 return false;
             }
         }

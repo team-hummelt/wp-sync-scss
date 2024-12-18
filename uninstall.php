@@ -31,4 +31,4 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 }
 
 delete_option('wp_sync_scss_show_welcome_page');
-delete_option('scss-auto-compiler/settings');
+delete_option('autocompiler-scss/settings');

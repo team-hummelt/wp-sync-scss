@@ -49,3 +49,4 @@ wp-config.php
 
 /includes/composer.lock
 /admin/react/yarn.lock
+/admin/react/node_modules/

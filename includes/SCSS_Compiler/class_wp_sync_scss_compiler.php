@@ -118,7 +118,7 @@ class WP_Sync_Scss_Compiler
                             $this->syncScssCompiler($source, $cssDestination);
                         }
                     } catch (Exception|SassException $e) {
-                        echo '<div class="d-flex justify-content-center flex-column position-absolute start-50 translate-middle bg-light p-3" style="z-index: 99999;width:95%;top:10rem;min-height: 150px; border: 2px solid #dc3545; border-radius: .5rem"> <span class="text-danger fs-5 fw-bolder d-flex align-items-center"><i class="bi bi-cpu fs-4 me-1"></i>SCSS Compiler Error:</span>   ' . $e->getMessage() . '</div>';
+                        echo '<div class="d-flex justify-content-center flex-column position-absolute start-50 translate-middle bg-light p-3" style="z-index: 99999;width:95%;top:10rem;min-height: 150px; border: 2px solid #dc3545; border-radius: .5rem"> <span class="text-danger fs-5 fw-bolder d-flex align-items-center"><i class="bi bi-cpu fs-4 me-1"></i>SCSS Compiler Error:</span>   ' . esc_html($e->getMessage()) . '</div>';
                     }
                 }
             }
@@ -130,6 +130,14 @@ class WP_Sync_Scss_Compiler
      */
     private function syncScssCompiler($source, $out = null)
     {
+        global $wp_filesystem;
+
+        // create a file interaction object, if it is not already created
+        if( ! $wp_filesystem ){
+            require_once ABSPATH . 'wp-admin/includes/file.php';
+            WP_Filesystem();
+        }
+
         ignore_user_abort(true);
         //set_time_limit(0);
         $cacheArr = null;
@@ -171,25 +179,33 @@ class WP_Sync_Scss_Compiler
         }
         $compiled = '';
         try {
-            $compiled = $scssCompiler->compileString(file_get_contents($source), $source);
+
+            $compiled = $scssCompiler->compileString($wp_filesystem->get_contents($source), $source);
             if($this->settings['map_option'] == 'file') {
                 $mapDest = $this->destination_dir . str_replace("/", "_", $this->css_file_name) . ".map";
-                file_put_contents($mapDest, $compiled->getSourceMap());
+                $wp_filesystem->put_contents($mapDest, $compiled->getSourceMap());
             }
             if ($out !== null) {
-                return file_put_contents($out, $compiled->getCss());
+                return $wp_filesystem->put_contents($out, $compiled->getCss());
             }
 
         } catch (Exception|SassException $e) {
-            echo '<div class="d-flex justify-content-center flex-column position-absolute start-50 translate-middle bg-light p-3" style="z-index: 99999;width:95%;top:10rem;min-height: 150px; border: 2px solid #dc3545; border-radius: .5rem"> <span class="text-danger fs-5 fw-bolder d-flex align-items-center"><i class="bi bi-cpu fs-4 me-1"></i>SCSS Compiler Error:</span>   ' . $e->getMessage() . '</div>';
+            echo '<div class="d-flex justify-content-center flex-column position-absolute start-50 translate-middle bg-light p-3" style="z-index: 99999;width:95%;top:10rem;min-height: 150px; border: 2px solid #dc3545; border-radius: .5rem"> <span class="text-danger fs-5 fw-bolder d-flex align-items-center"><i class="bi bi-cpu fs-4 me-1"></i>SCSS Compiler Error:</span>   ' . esc_html($e->getMessage()) . '</div>';
         }
         return $compiled;
     }
 
     private function check_if_dir($dir): bool
     {
+        global $wp_filesystem;
+
+        // create a file interaction object, if it is not already created
+        if( ! $wp_filesystem ){
+            require_once ABSPATH . 'wp-admin/includes/file.php';
+            WP_Filesystem();
+        }
         if (!is_dir($dir)) {
-            if (!mkdir($dir, 0777, true)) {
+            if (!$wp_filesystem->mkdir($dir, 0777, true)) {
                 return false;
             }
         }

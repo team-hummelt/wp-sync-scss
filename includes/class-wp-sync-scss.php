@@ -125,8 +125,16 @@ class Wp_Sync_Scss
                 'scss_login_aktiv' => false,
                 'cache_dir' => $cacheDir
             ];
+            global $wp_filesystem;
+
+            // create a file interaction object, if it is not already created
+            if( ! $wp_filesystem ){
+                require_once ABSPATH . 'wp-admin/includes/file.php';
+                WP_Filesystem();
+            }
+
             if(!is_dir($cacheDir)) {
-                mkdir($cacheDir, 0777, true);
+                $wp_filesystem->mkdir($cacheDir, 0777, true);
             }
             update_option($this->plugin_name . '/settings', $settings);
         }
@@ -252,7 +260,7 @@ class Wp_Sync_Scss
      */
     #[NoReturn] public function self_deactivate_notice(): void
     {
-        echo sprintf('<div class="notice notice-error is-dismissible" style="margin-top:5rem"><p>' . __('This plugin has been disabled because it requires a PHP version greater than %s and a WordPress version greater than %s. Your PHP version can be updated by your hosting provider.', 'scss-auto-compiler') . '</p></div>', WP_SYNC_SCSS_MIN_PHP_VERSION, WP_SYNC_SCSS_MIN_WP_VERSION);
+       // echo sprintf('<div class="notice notice-error is-dismissible" style="margin-top:5rem"><p>' . __('This plugin has been disabled because it requires a PHP version greater than %s and a WordPress version greater than %s. Your PHP version can be updated by your hosting provider.', 'scss-auto-compiler') . '</p></div>', WP_SYNC_SCSS_MIN_PHP_VERSION, WP_SYNC_SCSS_MIN_WP_VERSION);
         exit();
     }
 
