@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-30 02:17+0100\n"
-"PO-Revision-Date: 2024-11-30 02:19+0100\n"
+"POT-Creation-Date: 2024-12-18 08:36+0100\n"
+"PO-Revision-Date: 2024-12-18 08:38+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -27,14 +27,10 @@ msgid "Cache cleared"
 msgstr "Cache effacé"
 
 #: admin/class-wp-sync-scss-admin.php:76 admin/class-wp-sync-scss-admin.php:77
-#: includes/WpSyncScssDefaults.php:82
-msgid "SCSS Compiler"
-msgstr "Compilateur SCSS"
-
 #: admin/class-wp-sync-scss-admin.php:86 admin/class-wp-sync-scss-admin.php:87
 #: includes/WpSyncScssDefaults.php:83
-msgid "SCSS AutoCompiler"
-msgstr "SCSS AutoCompiler"
+msgid "AutoCSS Builder"
+msgstr "AutoCSS Builder"
 
 #: admin/class-wp-sync-scss-admin.php:99 includes/WpSyncScssDefaults.php:77
 msgid "Settings"
@@ -46,12 +42,12 @@ msgstr "Faire un don"
 
 #: admin/class-wp-sync-scss-admin.php:144
 msgid ""
-"SCSS AutoCompiler is a powerful WordPress plugin that converts SCSS files to "
+"AutoCSS Builder is a powerful WordPress plugin that converts SCSS files to "
 "CSS - directly in your admin area. Choose between different map output "
 "options (inline, separate file, or no map) to customise your workflow. Ideal "
 "for developers who value efficiency and customisability."
 msgstr ""
-"SCSS AutoCompiler est un puissant plugin WordPress qui convertit les "
+"SCSS AutoCSS Builder est un puissant plugin WordPress qui convertit les "
 "fichiers SCSS en CSS - directement dans votre zone d'administration. "
 "Choisissez parmi différentes options de sortie de carte (en ligne, fichier "
 "séparé, ou pas de carte) pour personnaliser votre flux de travail. Idéal "
@@ -108,6 +104,10 @@ msgstr "Paramètres du plugin"
 #: includes/WpSyncScssDefaults.php:81
 msgid "Cache active"
 msgstr "Aktiver Cache"
+
+#: includes/WpSyncScssDefaults.php:82
+msgid "SCSS Compiler"
+msgstr "Compilateur SCSS"
 
 #: includes/WpSyncScssDefaults.php:84
 msgid "Version"
@@ -206,16 +206,16 @@ msgstr "Plugin description"
 
 #: includes/WpSyncScssDefaults.php:107
 msgid ""
-"SCSS AutoCompiler is the ideal tool for developers and designers who want to "
+"AutoCSS Builder is the ideal tool for developers and designers who want to "
 "use SCSS in their WordPress projects. This plugin automatically converts "
 "SCSS files to CSS and offers flexible map output options, including inline "
 "maps, external files or no maps - depending on your needs."
 msgstr ""
-"SCSS AutoCompiler est l'outil idéal pour les développeurs et les designers "
-"qui souhaitent utiliser SCSS dans leurs projets WordPress. Ce plugin "
-"convertit automatiquement les fichiers SCSS en CSS et offre des options de "
-"sortie de carte flexibles, y compris des cartes en ligne, des fichiers "
-"externes ou aucune carte - en fonction de vos besoins."
+"AutoCSS Builder est l'outil idéal pour les développeurs et les designers qui "
+"souhaitent utiliser SCSS dans leurs projets WordPress. Ce plugin convertit "
+"automatiquement les fichiers SCSS en CSS et offre des options de sortie de "
+"carte flexibles, y compris des cartes en ligne, des fichiers externes ou "
+"aucune carte - en fonction de vos besoins."
 
 #: includes/WpSyncScssDefaults.php:108
 msgid "Features"
@@ -281,24 +281,24 @@ msgstr ""
 
 #: includes/WpSyncScssDefaults.php:118
 msgid ""
-"SCSS AutoCompiler - Your helper for clean and optimised CSS code in "
-"WordPress. 🚀"
+"AutoCSS Builder - Your helper for clean and optimised CSS code in WordPress. "
+"🚀"
 msgstr ""
-"SCSS AutoCompiler - Votre aide pour un code CSS propre et optimisé dans "
+"AutoCSS Builder - Votre aide pour un code CSS propre et optimisé dans "
 "WordPress. 🚀"
 
 #: includes/WpSyncScssDefaults.php:120
-msgid "🎉 Welcome to SCSS AutoCompiler!"
-msgstr "🎉 Bienvenue à SCSS AutoCompiler !"
+msgid "🎉 Welcome to AutoCSS Builder!"
+msgstr "🎉 Bienvenue à AutoCSS Builder!"
 
 #: includes/WpSyncScssDefaults.php:121
 msgid ""
-"Thank you for installing <span class=\"fw-semibold\">SCSS AutoCompiler!</"
-"span> We look forward to supporting you in your WordPress development "
-"process. With this plugin, you can easily convert SCSS files to CSS and "
-"optimise your workflow."
+"Thank you for installing <span class=\"fw-semibold\">AutoCSS Builder!</span> "
+"We look forward to supporting you in your WordPress development process. "
+"With this plugin, you can easily convert SCSS files to CSS and optimise your "
+"workflow."
 msgstr ""
-"Merci d'avoir installé <span class=\"fw-semibold\">SCSS AutoCompiler!</span> "
+"Merci d'avoir installé <span class=\"fw-semibold\">AutoCSS Builder</span> "
 "Nous sommes impatients de vous aider dans votre processus de développement "
 "WordPress. Avec ce plugin, vous pouvez facilement convertir les fichiers "
 "SCSS en CSS et optimiser votre flux de travail."
@@ -329,11 +329,11 @@ msgstr ""
 
 #: includes/WpSyncScssDefaults.php:127
 msgid ""
-"Upload your SCSS files to the corresponding directory. SCSS AutoCompiler "
-"will do the rest!"
+"Upload your SCSS files to the corresponding directory. AutoCSS Builder will "
+"do the rest!"
 msgstr ""
-"Téléchargez vos fichiers SCSS dans le répertoire correspondant. SCSS "
-"AutoCompiler fera le reste !"
+"Téléchargez vos fichiers SCSS dans le répertoire correspondant. AutoCSS "
+"Builder fera le reste !"
 
 #: includes/WpSyncScssDefaults.php:128
 msgid ""
@@ -373,17 +373,17 @@ msgstr ""
 "simple, en particulier pour les thèmes et les plugins WordPress."
 
 #: includes/WpSyncScssDefaults.php:133
-msgid "💖 Support the further development of SCSS AutoCompiler!"
-msgstr "💖 Soutenir le développement de SCSS AutoCompiler !"
+msgid "💖 Support the further development of AutoCSS Builder!"
+msgstr "💖 Soutenir le développement de AutoCSS Builder !"
 
 #: includes/WpSyncScssDefaults.php:134
 msgid ""
-"Thank you for using SCSS AutoCompiler! This plugin was developed to make "
-"your life as a developer easier - and it is constantly being improved. Your "
+"Thank you for using AutoCSS Builder! This plugin was developed to make your "
+"life as a developer easier - and it is constantly being improved. Your "
 "support helps us to develop new features, fix bugs and maintain the quality "
 "of the plugin."
 msgstr ""
-"Merci d'utiliser SCSS AutoCompiler ! Ce plugin a été développé pour vous "
+"Merci d'utiliser AutoCSS Builder! Ce plugin a été développé pour vous "
 "faciliter la vie en tant que développeur - et il est constamment amélioré. "
 "Votre soutien nous aide à développer de nouvelles fonctionnalités, à "
 "corriger les bugs et à maintenir la qualité du plugin."
@@ -435,19 +435,21 @@ msgid "Thank you very much for your support!"
 msgstr "Merci beaucoup pour votre soutien !"
 
 #: includes/WpSyncScssDefaults.php:143
-msgid "Together we make SCSS AutoCompiler even better."
-msgstr "Ensemble, nous rendons SCSS AutoCompiler encore meilleur."
+msgid "Together we make AutoCSS Builder even better."
+msgstr "Ensemble, nous rendons AutoCSS Builder encore meilleur."
 
-#: includes/class-wp-sync-scss.php:255
+#~ msgid "SCSS AutoCompiler"
+#~ msgstr "SCSS AutoCompiler"
+
 #, php-format
-msgid ""
-"This plugin has been disabled because it requires a PHP version greater than "
-"%s and a WordPress version greater than %s. Your PHP version can be updated "
-"by your hosting provider."
-msgstr ""
-"Ce plugin a été désactivé car il nécessite une version PHP supérieure à %s "
-"et une version WordPress supérieure à %s. Votre version de PHP peut être "
-"mise à jour par votre hébergeur."
+#~ msgid ""
+#~ "This plugin has been disabled because it requires a PHP version greater "
+#~ "than %s and a WordPress version greater than %s. Your PHP version can be "
+#~ "updated by your hosting provider."
+#~ msgstr ""
+#~ "Ce plugin a été désactivé car il nécessite une version PHP supérieure à "
+#~ "%s et une version WordPress supérieure à %s. Votre version de PHP peut "
+#~ "être mise à jour par votre hébergeur."
 
 #~ msgid "About WP-Sync-SCSS"
 #~ msgstr "A propos de WP-Sync-SCSS"
